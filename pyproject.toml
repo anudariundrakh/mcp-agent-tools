@@ -1,0 +1,31 @@
+[project]
+name = "mcp-agent-tools"
+version = "0.1.0"
+description = "Secure MCP tool-calling assistant for AD331"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "mcp[cli]>=1.28,<2",
+  "openai>=1.50,<4",
+  "httpx>=0.27,<1",
+  "pydantic>=2.8,<3",
+  "aiosqlite>=0.20,<1",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "python-dotenv>=1.0,<2",
+  "streamlit>=1.40,<2",
+  "sqlglot>=25,<30",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<10",
+  "pytest-asyncio>=0.24,<2",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

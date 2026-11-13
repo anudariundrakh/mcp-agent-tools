@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.streamlit/
+*.egg-info/
+
+VIDEO_SCRIPT.md
+SUBMISSION_TEMPLATE.md
+PLAN.md
+assignment.md
